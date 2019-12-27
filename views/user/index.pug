@@ -1,0 +1,11 @@
+h2 name
+a(href="user/create") listname
+form(action="/user/seach", method="Get")
+	input(type="text" name="q")
+	button seach
+ul
+	each ten in name
+		li= ten.name
+//- ul
+//- 	each tuoi in age
+//- 		li= tuoi.name + " age is: " +tuoi.age
