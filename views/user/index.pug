@@ -1,11 +1,19 @@
-h2 name
-a(href="user/create") listname
-form(action="/user/seach", method="Get")
-	input(type="text" name="q")
-	button seach
-ul
-	each ten in name
-		li= ten.name
+extends ../layout/common
+
+block content
+  h2 name
+  a(href='/user') home user   
+  a(href="user/create") listname
+  form(action="/user/seach", method="Get")
+    input(type="text" name="q")
+    button seach
+  ul
+    each ten in name
+      li
+        span= ten.name
+        span &nbsp
+        a(href="/user/"+ ten.userid) view
+		  
 //- ul
 //- 	each tuoi in age
 //- 		li= tuoi.name + " age is: " +tuoi.age
